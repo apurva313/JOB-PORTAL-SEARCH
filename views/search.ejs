@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Jobs</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Search for Jobs</h1>
+    <form method="post">
+        <input type="text" name="skill" placeholder="Skill" required>
+        <input type="text" name="location" placeholder="Location" required>
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        <% jobs.forEach(job => { %>
+            <li><%= job.title %> - <%= job.location %> - <a href="/apply/<%= job._id %>">Apply</a></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
