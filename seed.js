@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Job = require('./models/job');
 
-mongoose.connect('mongodb://localhost/job_portal', {
+mongoose.connect('mongodb://localhost:27017/job_portal', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
